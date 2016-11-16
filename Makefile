@@ -1,4 +1,4 @@
-# Makefile for building harkCaverns on Unix systems
+# Makefile for building hark on Unix systems
 
 all: clean hark
 
@@ -7,6 +7,9 @@ hark: hark.o
 
 hark.o:
 	clang -c -Wall -Wextra -Wpedantic -g -std=gnu11 -I/usr/local/include hark.c -o hark.o
+
+run:
+	./hark
 
 clean:
 	-rm hark *.o
